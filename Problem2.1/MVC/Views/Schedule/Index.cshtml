@@ -1,0 +1,104 @@
+﻿@model IEnumerable<MVC.FootballSchedule>
+
+@{
+    ViewBag.Title = "Schedule";
+}
+
+<h2><center>OU Football Schedule for ___</center></h2>
+
+@foreach (var item in Model)
+{
+    @if (item.IsHomeGame == true)
+    {
+        <div class="card img-rounded" style="color: white; background-color: darkred;width: 200px; height: 255px; float: left; margin: 5px; padding: 5px;">
+            <div class="card-body">
+                <span class="glyphicon glyphicon-home" aria-hidden="true">
+                    <img src="https://www.thelostogle.com/wp-content/uploads/2010/02/texas-longhorn-logo-450x225.jpg" style="width:80px; height: 40px;" />
+                </span>
+                <h2 class="card-title">OU vs. @Html.DisplayFor(model => item.Opponent)</h2>
+
+                @*@if (item.Opponent == "Texas")
+                    {
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                        <h2 class="card-title">OU vs. @Html.DisplayFor(model => item.Opponent)</h2>
+                        <img src="https://www.thelostogle.com/wp-content/uploads/2010/02/texas-longhorn-logo-450x225.jpg" />
+                    }
+                    else
+                    {
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                        <h2 class="card-title">OU vs. @Html.DisplayFor(model => item.Opponent)</h2>
+                        <h2 class="card-title">OU vs. @Html.DisplayFor(model => item.Opponent)</h2>
+                    }
+                    <p class="card-text">@Html.DisplayFor(model => item.Date)</p>*@
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card img-rounded" style="color: white; background-color: black;width: 200px; height: 255px; float: left; margin: 5px; padding: 5px;">
+            <div class="card-body">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true">
+                    <img src="https://www.thelostogle.com/wp-content/uploads/2010/02/texas-longhorn-logo-450x225.jpg" style="width:80px; height: 40px;" />
+                </span>
+                <h2 class="card-title">OU vs. @Html.DisplayFor(model => item.Opponent)</h2>
+
+                @*@if (item.Opponent == "Texas")
+            {
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                <h2 class="card-title">OU vs. @Html.DisplayFor(model => item.Opponent)</h2>
+                <img src="https://www.thelostogle.com/wp-content/uploads/2010/02/texas-longhorn-logo-450x225.jpg" />
+            }
+            else
+            {
+                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                <h2 class="card-title">OU vs. @Html.DisplayFor(model => item.Opponent)</h2>
+                <h2 class="card-title">OU vs. @Html.DisplayFor(model => item.Opponent)</h2>
+            }
+            <p class="card-text">@Html.DisplayFor(model => item.Date)</p>*@
+            </div>
+        </div>
+    }
+
+else}
+
+@*<img src="https://www.thelostogle.com/wp-content/uploads/2010/02/texas-longhorn-logo-450x225.jpg" />*@
+
+
+
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Opponent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsHomeGame)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Season)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Opponent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsHomeGame)
+                </td>
+
+            </tr>
+        }
+
+    </table>*@

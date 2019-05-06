@@ -1,5 +1,4 @@
-﻿using MVC.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,12 +15,16 @@ namespace MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "About the University of Oklahoma Football program";
+            ViewBag.Message = "Your application description page.";
 
-            About a = new About();
-
-            return View(a);
+            return View();
         }
 
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

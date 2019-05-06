@@ -1,10 +1,10 @@
-﻿@model MVC.FootballSchedule
+﻿@model MVC.Models.About
 
 @{
-    ViewBag.Title = "About Sooners Football";
+    ViewBag.Title = "About Sooners football";
 }
 
-<h2>About Sooners football.</h2>
-<h3>About the University of Oklahoma Football program</h3>
-<p>OU Football is coached by <b>Lincoln Riley.</b> The sooners have a bowl record of <b>29-22-1 (.567)</b> and have <b>7 (1950,1855, 1956, 1974, 1975, 1985, 2000)</b> in their history.</p>
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<p>OU Football is coached by <b>@(Model.HeadCoach).</b> The sooners have a bowl record of <b>@(Model.BowlRecord)</b> and have <b>@(Model.NationalTitles)</b> in their history.</p>
 
