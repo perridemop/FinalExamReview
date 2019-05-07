@@ -21,12 +21,12 @@
         glyph = "glyphicon-globe";
     }
 
-    <div class="card" style="width: 200px; height: 255px; float: left; color: white; background-color:@color; padding: 5px; margin: 5px; border-radius: 25px;">
+    <div class="card" style="width: 200px; height: 255px; float: left; color: white; padding: 5px; margin: 5px; border-radius: 25px; background-color:@color;">
         <div class="card-body">
             <span class="@("glyphicon " + glyph)" style="color:white; font-size:2.2em;"></span>
-            @if(item.Opponent.Trim().ToLower() =="texas")
+            @if (item.Opponent.Trim().ToLower() == "texas")
             {
-                <img class="card-img-top" style="width:55%" src="https://www.thelostogle.com/wp-content/uploads/2010/02/texas-longhorn-logo-450x225.jpg" alt="horns down"/>
+                <img class="card-img-top" style="width:55%" src="https://www.thelostogle.com/wp-content/uploads/2010/02/texas-longhorn-logo-450x225.jpg" alt="horns down" />
             }
             <h2 class="card-title">OU vs. @item.Opponent</h2>
             <p class="card-text">@item.Date.ToLongDateString()</p>
